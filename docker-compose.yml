@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  wog:
+    image: flask_wog
+    ports:
+    - "8777:5000"
+    container_name : wog_container
+
+
