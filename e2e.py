@@ -19,3 +19,5 @@ def main_function():
         return -1
     except:
         return 0
+
+print(main_function()) 
