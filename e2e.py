@@ -20,4 +20,4 @@ def main_function():
     except:
         return 0
 
-print(main_function()) 
+main_function() 
