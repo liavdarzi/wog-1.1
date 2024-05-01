@@ -24,10 +24,8 @@ pipeline {
         stage('Test'){
             steps{
                 script{
-                def x = bat 'python e2e.py'
-                if(x == 0){
-                    error 'Tests failed'
-                    }
+                def x = bat script: 'python e2e.py', returnStatus: true
+                assert x == 0 : "End-to-end tests failed with exit code -1"
                 }
             }
         }

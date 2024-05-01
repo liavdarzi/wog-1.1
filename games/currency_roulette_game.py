@@ -16,7 +16,10 @@ def get_money_interval(amount_of_money ,difficulty):
 #Prompts the user to input a guess for the converted value of a specified amount in USD.
 def get_guess_from_user(ammont_of_money):
     print(f'Guess how many is {ammont_of_money} USD in ILS :', end=" ")
-    guess = float(input())
+    guess = input()
+    while guess.isnumeric() == False:
+        guess = input("Your guess is illegal, please guess again: ")
+    guess = float(guess)
     return guess
 
 #Executes the game by employing the functions above, and returns True if the user wins, and False if the user loses.
